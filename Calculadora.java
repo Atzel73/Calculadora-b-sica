@@ -312,18 +312,15 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_Btn9ActionPerformed
 
     private void BtnSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSumaActionPerformed
-        String texto = JtxMostrar.toString();
-        char  arreglo[] = texto.toCharArray();
-        if (arreglo[0] == 0) {
-            JOptionPane.showMessageDialog("El cero es invalido. Por favor introduce otro. ");
-        }
-        if(!JtxMostrar.getText().equals("")){
-             Dato1 = JtxMostrar.getText();
+
+        if (!JtxMostrar.getText().equals("")) {
+            Dato1 = JtxMostrar.getText();
+            
             signo = "+";
             JtxMostrar.setText("");
- 
+
         }
-        
+
     }//GEN-LAST:event_BtnSumaActionPerformed
 
     private void BtnRestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRestaActionPerformed
@@ -375,11 +372,11 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_Btn0ActionPerformed
 
     private void BtnIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnIgualActionPerformed
-String texto = JtxMostrar.toString();
-        char  arreglo[] = texto.toCharArray();
-        if (arreglo[0] == 0) {
+String Texto = JtxMostrar.toString();
+         char  arreglo[] = Texto.toCharArray();
+        if (Texto.equals("0")) {
             JOptionPane.showMessageDialog("El cero es invalido. Por favor introduce otro. ");
-        } 
+        }
         String resultado;
         Dato2 = JtxMostrar.getText();
         
