@@ -146,6 +146,11 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         BtnPunto.setText(".");
+        BtnPunto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnPuntoActionPerformed(evt);
+            }
+        });
 
         Btn0.setText("0");
         Btn0.addActionListener(new java.awt.event.ActionListener() {
@@ -397,6 +402,19 @@ String Texto = JtxMostrar.toString();
             JtxMostrar.setText(cadena);
         } 
     }//GEN-LAST:event_BtnEraseActionPerformed
+
+    private void BtnPuntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPuntoActionPerformed
+        String cadena;
+     cadena = JtxMostrar.getText();
+     
+     if(cadena.length() <= 0){
+     JtxMostrar.setText("0.");     
+     }else{
+     if(!main.ExistePunto((JtxMostrar.getText()))){
+         JtxMostrar.setText(JtxMostrar.getText() + ".");
+     }
+     }
+    }//GEN-LAST:event_BtnPuntoActionPerformed
 
     /**
      * @param args the command line arguments
