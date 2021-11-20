@@ -317,38 +317,27 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_Btn9ActionPerformed
 
     private void BtnSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSumaActionPerformed
-
-        if (!JtxMostrar.getText().equals("")) {
+        String texto = JtxMostrar.toString();
+        if (!texto.equals("")) {
             Dato1 = JtxMostrar.getText();
-            
             signo = "+";
             JtxMostrar.setText("");
-
         }
-
     }//GEN-LAST:event_BtnSumaActionPerformed
 
     private void BtnRestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRestaActionPerformed
-       String texto = JtxMostrar.toString();
-        char  arreglo[] = texto.toCharArray();
-        if (arreglo[0] == 0) {
-            JOptionPane.showMessageDialog("El cero es invalido. Por favor introduce otro. ");
-        }
-        if(!JtxMostrar.getText().equals("")){
-             Dato1 = JtxMostrar.getText();
+        String texto = JtxMostrar.toString();
+        if (!texto.equals("")) {
+            Dato1 = JtxMostrar.getText();
             signo = "-";
             JtxMostrar.setText("");
- 
+
         }
     }//GEN-LAST:event_BtnRestaActionPerformed
 
     private void BtnMulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnMulActionPerformed
         String texto = JtxMostrar.toString();
-        char  arreglo[] = texto.toCharArray();
-        if (arreglo[0] == 0) {
-            JOptionPane.showMessageDialog("El cero es invalido. Por favor introduce otro. ");
-        }
-        if(!JtxMostrar.getText().equals("")){
+        if(!texto.equals("")){
              Dato1 = JtxMostrar.getText();
             signo = "*";
             JtxMostrar.setText("");
@@ -358,11 +347,7 @@ public class Calculadora extends javax.swing.JFrame {
 
     private void BtnDivActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDivActionPerformed
        String texto = JtxMostrar.toString();
-        char  arreglo[] = texto.toCharArray();
-        if (arreglo[0] == 0) {
-            JOptionPane.showMessageDialog("El cero es invalido. Por favor introduce otro. ");
-        }
-        if(!JtxMostrar.getText().equals("")){
+        if(!texto.equals("")){
              Dato1 = JtxMostrar.getText();
             signo = "/";
             JtxMostrar.setText("");
@@ -377,19 +362,13 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_Btn0ActionPerformed
 
     private void BtnIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnIgualActionPerformed
-String Texto = JtxMostrar.toString();
-         char  arreglo[] = Texto.toCharArray();
-        if (Texto.equals("0")) {
-            JOptionPane.showMessageDialog("El cero es invalido. Por favor introduce otro. ");
-        }
+        String Texto = JtxMostrar.toString();
         String resultado;
         Dato2 = JtxMostrar.getText();
-        
-        if(!Dato2.equals("")){
+        if (!Dato2.equals("")) {
             resultado = main.Calculadora(Dato1, Dato2, signo);
             JtxMostrar.setText(resultado);
         }
-        
     }//GEN-LAST:event_BtnIgualActionPerformed
 
     private void BtnEraseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEraseActionPerformed
